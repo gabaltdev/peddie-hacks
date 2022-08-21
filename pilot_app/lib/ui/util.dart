@@ -34,6 +34,7 @@ String dateTimeFormat(String format, DateTime? dateTime) {
 Future launchURL(String url) async {
   var uri = Uri.parse(url).toString();
   try {
+    // ignore: deprecated_member_use
     await launch(uri);
   } catch (e) {
     throw 'Could not launch $uri: $e';
